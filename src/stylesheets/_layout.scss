@@ -79,6 +79,18 @@
   padding-top: 20px;
 }
 
+.weather-controls {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > span {
+    color: $gray-700;
+    padding: 0 8px;
+  }
+}
+
 .weather-temp {
   margin-top: 16px;
   display: flex;
