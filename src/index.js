@@ -24,13 +24,17 @@ const populateWeatherInfo = ({ name, main, weather }) => {
   weatherMinTemp.innerHTML = `${main.temp_min} &#176;c min`;
 };
 
-const fetchWeatherInfo = async (event) => {
-  const { value } = event.target;
+const fetchWeatherInfo = async () => {
+  const activeWeatherUnit = JSON.parse(localStorage.getItem(UNIT_KEY));
+
+  const { value } = searchField;
   errorDisplay.textContent = '';
   if (!value.length) return;
 
   try {
-    const data = await fetch(`${URI}?q=${value}&units=metric&appid=${APPID}`);
+    const data = await fetch(
+      `${URI}?q=${value}&units=${activeWeatherUnit}&appid=${APPID}`,
+    );
     const res = await data.json();
 
     if (res.cod === 200) {
@@ -54,6 +58,7 @@ const changeWeatherUnit = (event) => {
   }
 
   localStorage.setItem(UNIT_KEY, JSON.stringify(unitType));
+  fetchWeatherInfo();
 };
 
 searchField.addEventListener('input', debounce(fetchWeatherInfo));
