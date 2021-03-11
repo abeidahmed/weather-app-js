@@ -2,6 +2,7 @@ import './stylesheets/index.scss';
 import debounce from './utils/debounce';
 
 const URI = 'https://api.openweathermap.org/data/2.5/weather';
+const APPID = '04d4d495e39f2311c4acd1148b6e2130';
 
 const searchField = document.getElementById('search-field');
 const weatherCity = document.getElementById('weather-city');
