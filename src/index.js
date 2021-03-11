@@ -3,6 +3,9 @@ import debounce from './utils/debounce';
 
 const URI = 'https://api.openweathermap.org/data/2.5/weather';
 const APPID = '04d4d495e39f2311c4acd1148b6e2130';
+const UNIT_KEY = 'weatherUnitType';
+const METRIC = 'metric';
+const IMPERIAL = 'imperial';
 
 const searchField = document.getElementById('search-field');
 const weatherCity = document.getElementById('weather-city');
@@ -11,6 +14,7 @@ const weatherType = document.getElementById('weather-type');
 const weatherMinTemp = document.getElementById('weather-min-temp');
 const weatherMaxTemp = document.getElementById('weather-max-temp');
 const errorDisplay = document.getElementById('error-display');
+const unitToggler = document.getElementById('unit-toggler');
 
 const populateWeatherInfo = ({ name, main, weather }) => {
   weatherCity.textContent = name;
@@ -40,4 +44,29 @@ const fetchWeatherInfo = async (event) => {
   }
 };
 
+const changeWeatherUnit = (event) => {
+  let unitType;
+
+  if (event.target.checked) {
+    unitType = IMPERIAL;
+  } else {
+    unitType = METRIC;
+  }
+
+  localStorage.setItem(UNIT_KEY, JSON.stringify(unitType));
+};
+
 searchField.addEventListener('input', debounce(fetchWeatherInfo));
+unitToggler.addEventListener('change', changeWeatherUnit);
+
+window.addEventListener('DOMContentLoaded', () => {
+  const unitTypeSet = JSON.parse(localStorage.getItem(UNIT_KEY));
+
+  if (!unitTypeSet) {
+    localStorage.setItem(UNIT_KEY, JSON.stringify(METRIC));
+  }
+
+  if (unitTypeSet && unitTypeSet === IMPERIAL) {
+    unitToggler.setAttribute('checked', '');
+  }
+});
