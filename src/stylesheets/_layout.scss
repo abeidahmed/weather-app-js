@@ -33,6 +33,10 @@
     height: 28px;
     color: $gray-500;
   }
+
+  &.noclick {
+    pointer-events: none;
+  }
 }
 
 .search-field {
