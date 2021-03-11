@@ -16,12 +16,22 @@ const weatherMaxTemp = document.getElementById('weather-max-temp');
 const errorDisplay = document.getElementById('error-display');
 const unitToggler = document.getElementById('unit-toggler');
 
-const populateWeatherInfo = ({ name, main, weather }) => {
+const populateWeatherInfo = ({
+  name, main, weather, activeWeatherUnit,
+}) => {
   weatherCity.textContent = name;
   weatherType.textContent = weather[0].main;
   weatherTemp.children[0].textContent = main.temp;
-  weatherMaxTemp.innerHTML = `${main.temp_max} &#176;c max`;
-  weatherMinTemp.innerHTML = `${main.temp_min} &#176;c min`;
+
+  if (activeWeatherUnit === METRIC) {
+    weatherMaxTemp.innerHTML = `${main.temp_max} &#176;C max`;
+    weatherMinTemp.innerHTML = `${main.temp_min} &#176;C min`;
+    weatherTemp.children[2].textContent = 'C';
+  } else {
+    weatherMaxTemp.innerHTML = `${main.temp_max} &#176;F max`;
+    weatherMinTemp.innerHTML = `${main.temp_min} &#176;F min`;
+    weatherTemp.children[2].textContent = 'F';
+  }
 };
 
 const fetchWeatherInfo = async () => {
@@ -39,7 +49,12 @@ const fetchWeatherInfo = async () => {
 
     if (res.cod === 200) {
       const { name, main, weather } = res;
-      populateWeatherInfo({ name, main, weather });
+      populateWeatherInfo({
+        name,
+        main,
+        weather,
+        activeWeatherUnit,
+      });
     } else {
       throw new Error('City not found. Please try again.');
     }
