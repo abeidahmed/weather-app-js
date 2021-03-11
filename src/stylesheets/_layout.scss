@@ -92,7 +92,7 @@
 }
 
 .weather-temp {
-  margin-top: 16px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -103,10 +103,11 @@
       display: inline-block;
       font-weight: 900;
       font-size: 64px;
+      line-height: 52px;
     }
 
     &:not(:first-child) {
-      font-size: 48px;
+      font-size: 24px;
       color: $gray-500;
     }
   }
