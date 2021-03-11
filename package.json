@@ -1,4 +1,15 @@
 {
+  "name": "weather-app-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production"
+  },
+  "author": {
+    "name": "Abeid Ahmed"
+  },
   "devDependencies": {
     "babel-eslint": "10.1.x",
     "eslint": "6.8.x",
