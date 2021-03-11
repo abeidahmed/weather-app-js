@@ -109,3 +109,11 @@
 .weather-min-max {
   color: $gray-700;
 }
+
+#error-display {
+  font-size: 18px;
+  margin-top: 16px;
+  text-align: center;
+  color: #ef4444;
+  font-weight: 500;
+}

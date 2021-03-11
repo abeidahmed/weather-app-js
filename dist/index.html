@@ -32,30 +32,32 @@
           </div>
           <input
             type="text"
+            id="search-field"
             class="search-field"
             placeholder="Search for a location..."
           />
         </div>
+        <div id="error-display"></div>
         <div class="weather-container">
           <div>
-            <h1 class="weather-city">Harlem</h1>
-            <h2 class="weather-temp">
+            <h1 id="weather-city" class="weather-city">Harlem</h1>
+            <h2 id="weather-temp" class="weather-temp">
               <span>19</span>
               <span>&#176;</span>
               <span>c</span>
             </h2>
             <section class="weather-details">
-              <h3 class="weather-type">Cloudy</h3>
+              <h3 id="weather-type" class="weather-type">Cloudy</h3>
               <div class="weather-min-max">
-                <span>25 &#176;c min</span>
+                <span id="weather-min-temp">25 &#176;c min</span>
                 <span>/</span>
-                <span>32 &#176;c max</span>
+                <span id="weather-max-temp">32 &#176;c max</span>
               </div>
             </section>
           </div>
         </div>
       </div>
     </main>
-    <script src="./main.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>
