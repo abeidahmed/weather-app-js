@@ -10,9 +10,9 @@
 
 ![Rain weather](./dist/screenshot/rain-shot.jpg)
 
-## Cold status
+## Clear status
 
-![Cold weather](./dist/screenshot/cold-shot.jpg)
+![Clear weather](./dist/screenshot/cold-shot.jpg)
 
 ## Features
 
