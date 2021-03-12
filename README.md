@@ -40,7 +40,7 @@
 - `cd` into the project directory
 - Run `npm install`
 - Run `npm run dev` to start the webpack server
-- Visit `localhost:3000`
+- Open the `index.html` file from the directory with your browser
 
 ## Author
 
