@@ -1,0 +1,137 @@
+.main {
+  min-height: 100vh;
+  background: url('../images/sun-weather.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  padding: 32px;
+}
+
+.search-container {
+  position: relative;
+  max-width: 676px;
+  margin: 0 auto;
+}
+
+.search-icon-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+
+  svg {
+    width: 28px;
+    height: 28px;
+    color: $gray-500;
+  }
+
+  &.noclick {
+    pointer-events: none;
+  }
+}
+
+.search-field {
+  padding: 16px 16px 16px 52px;
+  font-size: 20px;
+  outline: none;
+  border-radius: 12px;
+  display: block;
+  width: 100%;
+  border: 0;
+  background: rgba(255, 255, 255, 0.7);
+  box-sizing: border-box;
+  box-shadow: $shadow-lg;
+  transition: all 150ms ease-in-out;
+
+  &:focus {
+    background: rgba(255, 255, 255, 0.9);
+  }
+}
+
+.weather-container {
+  margin-top: 64px;
+  display: flex;
+  justify-content: center;
+
+  > div {
+    background: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: $shadow-lg;
+    padding: 48px 16px;
+    max-width: 376px;
+    width: 100%;
+  }
+}
+
+.weather-city {
+  font-size: 24px;
+}
+
+.weather-details {
+  border-top: 1px solid $gray-300;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.weather-controls {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > span {
+    color: $gray-700;
+    padding: 0 8px;
+  }
+}
+
+.weather-temp {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  > span {
+    &:first-child {
+      margin-right: 8px;
+      display: inline-block;
+      font-weight: 900;
+      font-size: 64px;
+      line-height: 52px;
+    }
+
+    &:not(:first-child) {
+      font-size: 24px;
+      color: $gray-500;
+    }
+  }
+}
+
+.weather-type {
+  font-size: 20px;
+  color: $gray-700;
+  margin-bottom: 12px;
+}
+
+.weather-min-max {
+  color: $gray-700;
+  font-size: 18px;
+}
+
+#error-display {
+  font-size: 18px;
+  margin-top: 16px;
+  text-align: center;
+  color: #ef4444;
+  font-weight: 500;
+}
