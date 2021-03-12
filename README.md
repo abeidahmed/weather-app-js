@@ -38,7 +38,6 @@
 
 - Clone the repo: `https://github.com/abeidahmed/weather-app-js.git`
 - `cd` into the project directory
-- Run `git pull origin feature-weather-app`
 - Run `npm install`
 - Run `npm run dev` to start the webpack server
 - Visit `localhost:3000`
@@ -66,4 +65,3 @@ Give a ⭐️ if you like
 ## License
 
 This project is MIT licensed.
-
