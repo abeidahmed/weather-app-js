@@ -4,15 +4,15 @@
 
 ## Cloudy status
 
-![Cloudy weather]('./dist/screenshot/cloud-shot.jpg')
+![Cloudy weather](./dist/screenshot/cloud-shot.jpg)
 
 ## Rain status
 
-![Rain weather]('./dist/screenshot/rain-shot.jpg')
+![Rain weather](./dist/screenshot/rain-shot.jpg)
 
 ## Cold status
 
-![Cold weather]('./dist/screenshot/cold-shot.jpg')
+![Cold weather](./dist/screenshot/cold-shot.jpg)
 
 ## Features
 
