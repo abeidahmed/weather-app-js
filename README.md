@@ -21,6 +21,7 @@
 - Display city's current weather status. Eg: clear, cloudy, rainy, etc
 - Change the background of the app dynamically according to the city's current
   weather status
+- Toggle temperature unit between Celsius and Fahrenheit (the state is persistent)
 
 ## Built with
 
