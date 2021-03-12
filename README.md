@@ -2,6 +2,10 @@
 
 > See live weather reports from all around the world.
 
+## Live demo
+
+[Link](https://abeidahmed.github.io/weather-app-js/)
+
 ## Cloudy status
 
 ![Cloudy weather](./dist/screenshot/cloud-shot.jpg)
